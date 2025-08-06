@@ -1,0 +1,47 @@
+/* Estilos customizados para o Chatbot ANTAQ */
+
+.source-card {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.source-card p {
+    margin: 0;
+}
+
+/* Estilos adicionais para melhorar a aparência */
+.main-header {
+    background: linear-gradient(90deg, #1f4e79 0%, #2c5f8a 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.metric-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.example-question {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.example-question:hover {
+    background-color: #e9ecef;
+    border-color: #1f4e79;
+} 

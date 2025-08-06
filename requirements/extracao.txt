@@ -1,0 +1,31 @@
+# Dependências específicas para o módulo de extração
+
+# Include base requirements
+-r base.txt
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+lxml>=4.9.0
+
+# PDF processing
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+pdfminer.six>=20220524
+
+# OCR (se necessário)
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# HTTP e sessões
+urllib3>=2.0.0
+fake-useragent>=1.4.0
+
+# Processamento de texto
+unidecode>=1.3.0
+regex>=2023.10.0
+
+# Sistema e monitoramento
+psutil>=5.9.0
+schedule>=1.2.0
