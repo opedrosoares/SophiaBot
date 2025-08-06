@@ -1,4 +1,4 @@
-# 🚢 Sophia - Sistema Integrado ANTAQ
+# Chatbot de Normas - SophiaBot
 
 Sistema completo para extração de dados e consultas inteligentes sobre normas da ANTAQ (Agência Nacional de Transportes Aquaviários).
 
@@ -162,8 +162,7 @@ cat docs/CHATBOT.md
 
 ## 📞 Suporte
 
-- **📧 Email**: suporte@antaq.gov.br
-- **🌐 Website**: https://antaq.gov.br
+- **📧 Email**: pedro.soares@antaq.gov.br
 - **📖 Documentação**: Veja a pasta `docs/`
 - **🐛 Issues**: Use o sistema de issues do GitHub
 
