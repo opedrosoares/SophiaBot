@@ -1,0 +1,39 @@
+# Dependências do Chatbot para CentOS 8.5.2111
+# Versões compatíveis com Python 3.9 e CentOS
+
+# Core ML e AI
+openai>=1.12.0,<2.0.0
+tiktoken>=0.5.0,<1.0.0
+
+# Interface e Web
+streamlit>=1.31.0,<2.0.0
+streamlit-chat>=0.1.1,<1.0.0
+
+# Banco vetorial e busca
+chromadb>=0.4.22,<1.0.0
+sentence-transformers>=2.2.2,<3.0.0
+
+# Processamento de dados (versões compatíveis)
+pandas>=1.5.0,<2.1.0
+numpy>=1.24.0,<2.0.0
+pyarrow>=14.0.0,<15.0.0
+
+# Processamento de texto
+langchain>=0.1.0,<1.0.0
+langchain-openai>=0.0.8,<1.0.0
+langchain-community>=0.0.19,<1.0.0
+
+# Utilitários
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+dateparser>=1.2.0
+
+# Interface aprimorada
+plotly>=5.17.0,<6.0.0
+altair>=5.2.0,<6.0.0
+
+# Cache e performance
+diskcache>=5.6.3,<6.0.0
+
+# Logging e monitoramento
+loguru>=0.7.2 

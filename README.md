@@ -96,6 +96,21 @@ cd SophiaBot
 pip install -r requirements/base.txt
 ```
 
+### 🖥️ Instalação em Servidor de Produção
+
+Para instalar em servidores CentOS 8.5.2111 ou outros ambientes de produção, consulte o guia completo:
+
+**[🚀 Guia de Instalação em CentOS](docs/INSTALACAO_CENTOS.md)**
+
+Este guia inclui:
+- Configuração de ambiente Python
+- Configuração de firewall
+- Serviço systemd para execução automática
+- Proxy reverso com Nginx
+- Configuração SSL
+- Monitoramento e backup
+- Solução de problemas comuns
+
 ### 2. Usar Módulo de Extração
 
 ```bash
@@ -284,3 +299,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 - [📋 Como Usar](docs/COMO_USAR.md)
 - [⚙️ Configuração da API](docs/CONFIGURACAO_API.md)
 - [🔧 Instruções de Vetorização](docs/INSTRUCOES_VETORIZACAO.md)
+- [🚀 Instalação em CentOS](docs/INSTALACAO_CENTOS.md)
