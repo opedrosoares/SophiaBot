@@ -1,13 +1,4 @@
-# Arquivos de ambiente
-.env
-.env.local
-.env.*.local
-
-# Arquivos do sistema
-.DS_Store
-Thumbs.db
-
-# Arquivos Python
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -28,52 +19,48 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Ambientes virtuais
+# Virtual environments
 venv/
 env/
 ENV/
-env.bak/
-venv.bak/
 
-# IDEs
+# Environment variables
+.env
+.env.local
+.env_file
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
 logs/
 
-# Banco de dados
-*.db
-*.sqlite
-*.sqlite3
-
-# Base de dados vetorial ChromaDB
-chroma_db/
-**/chroma_db/
-**/chroma_db/**/*
-
-# Arquivos temporários
-*.tmp
-*.temp
-
-# Arquivos de backup
-*.bak
-*.backup
-backups/
-
-# Arquivos de dados grandes
+# Data files (manter apenas as coleções otimizadas)
 *.parquet
 *.csv
-*.json
-data/
-exports/
+*.xlsx
+*.pdf
 
-# Arquivos de configuração sensíveis
-config/local.py
-config/production.py 
+# Backup files
+*_backup_*
+backup/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Streamlit
+.streamlit/secrets.toml
+
+# ChromaDB - Banco vetorial
+chroma_db/

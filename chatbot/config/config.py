@@ -40,7 +40,7 @@ OPENAI_MAX_TOKENS = int(os.getenv('OPENAI_MAX_TOKENS', '1500'))
 # ===============================
 
 # Diretório para persistir o banco ChromaDB
-CHROMA_PERSIST_DIRECTORY = Path('./chroma_db')
+CHROMA_PERSIST_DIRECTORY = Path(__file__).parent.parent.parent / 'chroma_db'
 
 # Nome da coleção no ChromaDB
 COLLECTION_NAME = 'normas_antaq'

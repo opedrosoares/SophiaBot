@@ -22,13 +22,18 @@ import random
 current_dir = Path(__file__).parent
 sys.path.append(str(current_dir))
 
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
+# Adicionar diretório pai (chatbot) ao path
+chatbot_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(chatbot_dir))
 
-from core.vector_store import VectorStoreANTAQ
-from core.rag_system import RAGSystemANTAQ
-from config.config import OPENAI_API_KEY, OPENAI_MODEL, CHROMA_PERSIST_DIRECTORY, DATA_PATH
+# Adicionar diretório raiz do projeto ao path
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+# Importações dos módulos do chatbot
+from chatbot.core.vector_store import VectorStoreANTAQ
+from chatbot.core.rag_system import RAGSystemANTAQ
+from chatbot.config.config import OPENAI_API_KEY, OPENAI_MODEL, CHROMA_PERSIST_DIRECTORY, DATA_PATH
 
 # Configuração da página
 st.set_page_config(
@@ -260,20 +265,18 @@ class ChatbotANTAQApp:
                     persist_directory=str(CHROMA_PERSIST_DIRECTORY)
                 )
                 
-                # Verificar se precisa carregar dados
-                if not DATA_PATH.exists():
-                    st.error(f"❌ Arquivo de dados não encontrado: {DATA_PATH}")
-                    return
-                
-                # Carregar dados se necessário
-                success = st.session_state.vector_store.load_and_process_data(
-                    str(DATA_PATH),
-                    force_rebuild=False
-                )
-                
-                if not success:
-                    st.error("❌ Erro ao carregar dados no banco vetorial")
-                    return
+                # Verificar se o ChromaDB já tem dados
+                try:
+                    collection = st.session_state.vector_store.client.get_collection(st.session_state.vector_store.collection_name)
+                    doc_count = collection.count()
+                    if doc_count > 0:
+                        st.success(f"✅ ChromaDB carregado com {doc_count} documentos")
+                        st.info("ℹ️ Usando base de dados existente. Algumas funcionalidades podem estar limitadas.")
+                    else:
+                        st.warning("⚠️ ChromaDB está vazio. Algumas funcionalidades podem não estar disponíveis.")
+                except Exception as e:
+                    st.warning(f"⚠️ Erro ao verificar ChromaDB: {str(e)}")
+                    st.info("ℹ️ Continuando sem verificação de dados...")
                 
                 # Inicializar RAG system
                 st.session_state.rag_system = RAGSystemANTAQ(

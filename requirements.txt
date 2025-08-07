@@ -1,0 +1,37 @@
+# Core dependencies
+streamlit>=1.31.0
+pandas>=2.1.0
+numpy>=1.24.3
+openai>=1.12.0
+chromadb>=0.4.22
+tiktoken>=0.5.0
+tqdm>=4.66.0
+
+# Data processing
+pyarrow>=14.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Interface and Web
+streamlit-chat>=0.1.1
+
+# Vector database and search
+sentence-transformers>=2.2.2
+
+# Text processing
+langchain>=0.1.0
+langchain-openai>=0.0.8
+langchain-community>=0.0.19
+
+# Enhanced interface
+plotly>=5.17.0
+altair>=5.2.0
+
+# Cache and performance
+diskcache>=5.6.3
+
+# Logging and monitoring
+loguru>=0.7.2
+dateparser>=1.2.0
