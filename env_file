@@ -1,5 +1,5 @@
 # Configurações da API OpenAI
-OPENAI_API_KEY=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
+OPENAI_API_KEY=sua-chave-openai-aqui
 
 # Configurações do modelo OpenAI
 OPENAI_MODEL=gpt-4.1-nano
